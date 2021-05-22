@@ -1,35 +1,35 @@
-const baseUrl = "http://localhost:3004";
+const baseUrl = "http://localhost:3000";
 
 const path = {
   employees: "/employees",
   comments: "/comments"
 };
 
-[{ key: 'active', value: 'true' }]
+// [{ key: 'active', value: 'true' }]
 const generateQueryString = (queryParams = []) => queryParams.length 
   ? `?${queryParams.map(x => `${x.key}=${x.value}`).join('&')}` 
   : '';
 
 // --------- getEmployees ----------
-/* const getEmployees = async (queryParams) => {
+const getEmployees = async (queryParams) => {
   const response = await fetch(`${baseUrl}${path.employees}${generateQueryString(queryParams)}`);
 
   const items = await response.json();
   const count = Number(response.headers.get('X-Total-Count'));
 
   return { items, count };
-}; */
+};
 
 // --------- getEmployee ----------
-/* const getEmployee = async (id) => {
+const getEmployee = async (id) => {
   const response = await fetch(`${baseUrl}${path.employees}/${id}`);
   const employee = await response.json();
   
   return {employee};
-}; */
+};
 
 // --------- createEmployee ----------
-/* const createEmployee = async (body) => {
+const createEmployee = async (body) => {
   const response = await fetch(`${baseUrl}${path.employees}`, {
     method: 'POST',
     headers: {
@@ -39,10 +39,10 @@ const generateQueryString = (queryParams = []) => queryParams.length
   });
   const employee = await response.json();
   return employee;
-}; */
+};
 
 // --------- updateEmployee ----------
-/* const updateEmployee = async (id, body) => {
+const updateEmployee = async (id, body) => {
   const response = await fetch(`${baseUrl}${path.employees}/${id}`, {
     method: 'PUT',
     headers: {
@@ -52,10 +52,10 @@ const generateQueryString = (queryParams = []) => queryParams.length
   });
   const employee = await response.json();
   return employee;
-}; */
+};
 
 // --------- updateEmployeeParam ----------
-/* const updateEmployeeParam = async (id, body) => {
+const updateEmployeeParam = async (id, body) => {
   const response = await fetch(`${baseUrl}${path.employees}/${id}`, {
     method: 'PATCH',
     headers: {
@@ -65,7 +65,7 @@ const generateQueryString = (queryParams = []) => queryParams.length
   });
   const employee = await response.json();
   return employee;
-}; */
+};
 
 // --------- deleteEmployee ----------
 const deleteEmployee = async (id) => {
@@ -110,17 +110,17 @@ const deleteEmployee = async (id) => {
   console.log(employee);
 }; */
 
-/* const main = async () => {
-  const employee = await updateEmployeeParam(2, { 
+const main = async () => {
+  const employee = await updateEmployeeParam(3, { 
       role: "Product Manager",      
     });
 
   console.log(employee);
-}; */
-
-const main = async () => {
-  const employee = await deleteEmployee(3);
-  console.log(employee);
 };
+
+// const main = async () => {
+//   const employee = await deleteEmployee(2);
+//   console.log(employee);
+// };
 
 main();
