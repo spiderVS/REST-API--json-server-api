@@ -1,0 +1,46 @@
+{
+  "employees": [
+    {
+      "name": "Vasyan",
+      "salary": 1900,
+      "active": true,
+      "role": "Manager",
+      "id": 1
+    },
+    {
+      "name": "Kostyan",
+      "salary": 2100,
+      "active": true,
+      "role": "Product Manager",
+      "id": 2
+    },
+    {
+      "name": "Dimon",
+      "role": "Frontend Developer",
+      "salary": 1500,
+      "active": true,
+      "id": 3
+    },
+    {
+      "name": "Sanya",
+      "role": "Fullstack Developer",
+      "salary": 2500,
+      "active": false,
+      "id": 4
+    },
+    {
+      "name": "Masha",
+      "role": "HR",
+      "salary": 1800,
+      "active": true,
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "employeeID": 1,
+      "message": "Hello world"
+    }
+  ]
+}
